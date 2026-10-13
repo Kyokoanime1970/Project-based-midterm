@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('water.gif');
+
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    color: #222222;
+
+
+    min-height: 100vh;
+    margin: 0;
+    padding: 24px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 32px;
+
+    font-size: 2rem;
+    font-family: 'georgia', serif;
+    color: #f9faf9;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+
+    animation: fadeIn 2s ease-in;
+}
+
+header p {
+    font-size: 1.7rem;
+    font-family: 'georgia', serif;
+    color: #f4780b;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+
+main {
+
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    background-color: rgba(219, 194, 194, 0.149);
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #f6f6f6;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+    gap: 24px;
+    font-size: 1.5rem;
+
+    animation: fadeIn 3s ease-in-out;
+
+}
+
+
+blockquote {
+    background-color: #f4f7fb4c;
+    padding: 24px;
+    margin: 24px 0;
+    border-left: 4px solid #eb974299;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+
+#author {
+
+    font-size: 1.25rem;
+    color: #f5d6b6c5;
+    text-align: right;
+    margin-top: 16px;
+}
+
+
+#generateQuote {
+
+    background: none;
+    text-decoration: none;
+    border: none;
+    color: rgb(249, 248, 248);
+
+    margin-top: 30px;
+
+    font-size: 1.25rem;
+    font-family: 'georgia', serif;
+
+    cursor: pointer;
+
+    transform: scale(1.2);
+    transition: transform 1s ease-out;
+
+    position: relative;
+}
+
+
+#generateQuote::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+
+    width: 0;
+    height: 2px;
+    background-color: rgb(255, 114, 12);
+
+    transition: width 1.4s ease, left 1.4s ease;
+}
+
+#generateQuote:hover {
+    transform: scale(1.5);
+
+}
+
+
+#generateQuote:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    body {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        padding: 24px 16px;
+    }
+
+    header {
+        margin-bottom: 0;
+        font-size: 1.5rem;
+        text-align: center;
+        gap: 12px;
+    }
+
+    header p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+
+    main {
+        width: 100%;
+        max-width: 500px;
+        padding: 24px;
+        font-size: 1.25rem;
+    }
+
+    blockquote {
+        padding: 20px;
+        margin: 20px 0;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
+    }
+
+    #author {
+        font-size: 1.1rem;
+    }
+
+    #generateQuote {
+        margin-top: 16px;
+        font-size: 1.1rem;
+    }
+
+    
+    #generateQuote:hover {
+        transform: scale(1.2);
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+
+    body {
+        padding: 20px 12px;
+        gap: 20px;
+        background-position: center;
+    }
+
+    header {
+        font-size: 1.15rem;
+        gap: 8px;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 18px 14px;
+        border-radius: 12px;
+        font-size: 1.1rem;
+    }
+
+    blockquote {
+        padding: 16px 12px;
+        margin: 18px 0;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    #author {
+        font-size: 0.95rem;
+        margin-top: 12px;
+    }
+
+    #generateQuote {
+        font-size: 1rem;
+        margin-top: 12px;
+    }
+
+    #generateQuote:hover {
+        transform: scale(1.2);
+    }
+
+    #generateQuote::after {
+        transition: width 0.3s ease, left 0.3s ease;
+    }
+}

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+
+
+
+    <style>
+    /* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111a33;
+    font-family: Arial, sans-serif;
+    color: white;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background-color: #1c2b4a;
+    padding: 20px 8%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    color: #83c7e8;
+    font-size: 22px;
+}
+
+.nav-side {
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* MAIN */
+main {
+    width: 85%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+/* INTRODUCTION */
+.hero {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.hero p:first-child {
+    color: #83c7e8;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin: 10px 0;
+}
+
+.hero h2 {
+    color: #83c7e8;
+    font-size: 22px;
+}
+
+.hero p:last-child {
+    max-width: 600px;
+    margin: 15px auto;
+    color: #ccc;
+}
+
+/* PROFILE */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 25px;
+    margin-bottom: 25px;
+    background-color: #1c2b4a;
+    border-radius: 10px;
+}
+
+.img-content {
+    flex: 0 0 250px;
+}
+
+.img-content img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.profile-content {
+    flex: 1;
+}
+
+.label,
+.section-label {
+    color: #83c7e8;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.about-heading {
+    margin-bottom: 10px;
+}
+
+.profile-content p:not(.label) {
+    color: #ccc;
+}
+
+/* SKILLS */
+.roles ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    list-style: none;
+}
+
+.roles li {
+    background-color: #304565;
+    color: #83c7e8;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+/* PROJECT */
+.project {
+    background-color: #1c2b4a;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+#project-heading {
+    margin: 8px 0 12px;
+}
+
+.project p:not(.section-label) {
+    color: #ccc;
+    margin-bottom: 12px;
+}
+
+/* BUTTON */
+.button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background-color: #4c8caf;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #367696;
+}
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    color: #aaa;
+    font-size: 12px;
+}
+
+/* PHONE */
+@media (max-width: 650px) {
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    main {
+        width: 90%;
+        margin: 25px auto;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .profile {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px;
+    }
+
+    .img {
+        flex: auto;
+        width: 100%;
+    }
+
+    .img img {
+        height: 280px;
+    }
+
+    .project {
+        padding: 20px;
+    }
+}
+
+
+    </style>
+</head>
+
+
+<body>
+
+    <header>
+        <div class="nav">
+            <h1 class="logo">RANDOM QUOTE GENERATOR</h1>
+            <p class="nav-side">BSIT 2nd | IT 110 | AQIJ1</p>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <p>STUDENT PROJECT PORTFOLIO</p>
+            <h1>Daniel Jerald E. Cicat</h1>
+            <h2>Random Quote Generator</h2>
+            <p>Welcome to my portfolio! This page introduces me as an IT student and presents my Random Quote Generator
+                project, built to practice my skills in web development.</p>
+        </section>
+
+        <section class="profile">
+
+            <div class="img-content"> <img src="profile.jpg" alt="picture of Jerald Cicat"></div>
+
+            <div class="profile-content">
+                <p class="label">GET TO KNOW ME</p>
+                <h1 class="about-heading">ABOUT ME</h1>
+                <p>My name is Daniel Jerald E. Cicat, and I am a second-year Bachelor of Science in Information
+                    Technology (BSIT) student. I am interested in programming and web development, especially learning
+                    how HTML, CSS, and JavaScript work together to create interactive websites. Through this project, I
+                    aim to improve my programming skills and gain practical experience.</p>
+
+                <div class="roles">
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JAVASCRIPT</li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+        </section>
+
+        <section class="project">
+            <p class="section-label">Featured project</p>
+            <h3 id="project-heading">About the Random Quote Generator</h3>
+            <p>
+                The Random Quote Generator is a simple web application that
+                displays a random quote whenever the user clicks the
+                “Generate Quote” button. JavaScript selects a quote from an
+                array and displays it on the webpage.
+            </p>
+            <p>
+                The main goal of this project is to demonstrate how JavaScript
+                can make a website interactive while helping me understand
+                programming logic and event handling.
+            </p>
+
+            <a class="button" href="app.html">Explore My Application</a>
+        </section>
+
+
+
+    </main>
+
+    <footer style="text-align:center;">
+        © 2026 Daniel Jerald E. Cicat. All rights reserved.
+    </footer>
+</body>
+
+</html>
