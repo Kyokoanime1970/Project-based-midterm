@@ -6,7 +6,6 @@
 
 body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('water.gif');
-
     background-size: cover;
     background-position: center;
     font-family: Arial, sans-serif;
@@ -45,6 +44,36 @@ header p {
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
+#musicButton {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+
+    color: #f9faf9;
+    font-family: Georgia, serif;
+    font-size: 1rem;
+
+    padding: 10px 18px;
+    width: 100px;
+    margin-top: 12px;
+
+    cursor: pointer;
+    transition: background-color 0.9s ease,
+        border-color 0.9s ease,
+        width 0.9s ease,
+        color 0.9s ease;
+}
+
+#musicButton:hover {
+    width: 120px;
+    background-color: rgba(255, 255, 255, 0.12);
+    border-color: #f4780b;
+    color: #f4780b;
+}
+
+#musicButton:active {
+    background-color: #f4780b;
+}
 
 main {
 
@@ -191,7 +220,7 @@ blockquote {
         font-size: 1.1rem;
     }
 
-    
+
     #generateQuote:hover {
         transform: scale(1.2);
     }

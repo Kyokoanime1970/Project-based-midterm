@@ -1,12 +1,14 @@
-let quoteElement = document.getElementById("quote");
+const quoteElement = document.getElementById("quote");
 
-let authorElement = document.getElementById("author");
+const authorElement = document.getElementById("author");
 
-let button = document.getElementById("generateQuote");
+const button = document.getElementById("generateQuote");
 
-let messageElement = document.getElementById("message");
+const messageElement = document.getElementById("message");
 
-let musicElement = document.getElementById("musicBackground");
+const musicElement = document.getElementById("musicBackground");
+
+const musicButton = document.getElementById("musicButton");
 
 async function getQuote() {
     button.disabled = true;
@@ -28,7 +30,7 @@ async function getQuote() {
 
         quoteElement.textContent = quoteData.quote;
         authorElement.textContent = "— " + quoteData.author;
-
+        messageElement.textContent = "";
 
 
     } catch (error) {
@@ -40,10 +42,23 @@ async function getQuote() {
 }
 
 
-button.addEventListener("click",function () {
+button.addEventListener("click", function () {
 
     getQuote();
 
 });
+
+
+musicButton.addEventListener("click", function () {
+
+    if (musicElement.paused) {
+        musicElement.play();
+        musicButton.textContent = "⏸";
+    } else {
+        musicElement.pause();
+        musicButton.textContent = "▶";
+    }
+});
+
 
 
